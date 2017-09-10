@@ -1,0 +1,15 @@
+.page-title-container {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../../../assets/img/backgrounds/contact.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.contact-info-list {
+  list-style: none;
+
+  i {
+    display: inline-block;
+    text-align: center;
+    width: 40px;
+  }
+}

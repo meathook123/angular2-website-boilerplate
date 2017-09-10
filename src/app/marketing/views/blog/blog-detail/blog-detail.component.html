@@ -1,0 +1,16 @@
+<section class="container-fluid page-title-container">
+  <div class="container text-center">
+    <h1>{{data.title}}</h1>
+  </div>
+</section>
+
+<section class="container-fluid news-list-container">
+  <div class="container">
+    <article>
+      <p *ngFor="let p of data.paragraphs">{{p}}</p>
+    </article>
+    <div *ngIf="!data.title">
+      <h5>Sorry, article could not be found.</h5>
+    </div>
+  </div>
+</section>

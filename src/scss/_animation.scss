@@ -1,0 +1,107 @@
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin transform-origin ($origin) {
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  transform-origin: $origin;
+}
+@mixin keyframes( $animationName ) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin animation ($delay, $duration, $animation) {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -ms-animation-delay: $delay;
+  -ms-animation-duration: $duration;
+  -ms-animation-name: $animation;
+  -ms-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+@include keyframes( scaleInDown )
+{
+  0% {
+    opacity: 0;
+    @include transform( scale(1, 0.2) );
+    @include transform-origin ( top );
+  }
+
+  100% {
+    opacity: 1;
+    @include transform( none );
+    @include transform-origin ( top );
+  }
+}
+
+@include keyframes(fadeInBackdrop) {
+  0%   { opacity: 0; }
+  100% { opacity: 0.5; }
+}
+
+@include keyframes(fadeInAlert) {
+  0%   { opacity: 0; }
+  100% { opacity: 0.9; }
+}
+
+@include keyframes(fadeInFull) {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+html {
+  @include animation(0s, 0.5s, fadeInFull);
+}
+
+// .page-wrapper {
+  section.container-fluid {
+    @include animation(0s, 0.5s, fadeInFull);
+  }
+// }
+
+.scaleInDown {
+  @include animation(0s, 0.5s, scaleInDown);
+}
+
+.modal-backdrop.show {
+  opacity: 0;
+  @include animation(0s, 0.5s, fadeInBackdrop);
+}
+
+.modal.animated {
+  animation-duration: 0.25s;
+}
+
+.alert {
+  opacity: 0;
+  @include animation(0s, 0.5s, fadeInAlert);
+}

@@ -1,0 +1,107 @@
+* {
+  outline: none !important;
+}
+
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  background-color: $gray-bg;
+}
+
+body {
+  color: $text-color;
+  font-family: $font-stack;
+  // font-weight: 300;
+  background: none;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+}
+
+p {
+  font-size: 22px;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.btn-yea-primary {
+  background-color: $color-primary;
+  color: white;
+
+  &:hover {
+    background-color: darken($color-primary, 15%);
+  }
+}
+
+section.container-fluid {
+  min-height: 400px;
+  padding: 40px 0;
+
+  &.page-title-container {
+    min-height: 0;
+    height: 250px;
+
+    h1, p {
+      font-weight: 600;
+    }
+  }
+
+  &:first-child {
+    padding-top: 100px;
+  }
+}
+
+// .btn-success {
+//   background-color: darken($color-success-bg, 30%);
+//   border-color: darken($color-success-bg, 30%);
+// }
+
+// .btn-danger {
+//   background-color: darken($color-danger-bg, 30%);
+//   border-color: darken($color-danger-bg, 30%);
+// }
+
+// .alert {
+//   padding: 5px 35px 5px 20px;
+//   margin-bottom: 5px;
+// }
+
+// .alert-dismissible .close {
+//   padding: 0;
+//   top: -1px;
+//   font-size: 20px;
+// }
+
+// .progress-bar-ok {
+//   .progress-bar {
+//     background-color: $color-success;
+//   }
+// }
+
+// .progress-bar-warning {
+//   .progress-bar {
+//     background-color: $color-warning;
+//   }
+// }
+
+// .progress-bar-danger {
+//   .progress-bar {
+//     background-color: $color-danger;
+//   }
+// }
+

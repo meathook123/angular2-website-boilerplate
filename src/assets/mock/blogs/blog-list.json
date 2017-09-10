@@ -1,0 +1,14 @@
+[
+  {
+    "id": "article_1",
+    "title": "Sample Article 1",
+    "author": "Jony J",
+    "description": "this is an article"
+  },
+  {
+    "id": "article_2",
+    "title": "Sample Article 2",
+    "author": "Arthor Y",
+    "description": "this is also an article"
+  }
+]

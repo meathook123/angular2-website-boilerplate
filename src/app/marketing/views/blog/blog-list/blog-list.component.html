@@ -1,0 +1,21 @@
+<section class="container-fluid page-title-container">
+  <div class="container text-center">
+    <h1>Blog</h1>
+  </div>
+</section>
+
+<section class="container-fluid blog-list-container">
+  <div *ngFor="let blog of blogList" class="blog-list-item">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-sm-4">
+          <h3>{{blog.title}}</h3>
+        </div>
+        <div class="col-sm-8">
+          <h3>{{blog.description}}</h3>
+          <button class="btn btn-lg btn-yea-primary" (click)="goToBlog(blog.id)">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
